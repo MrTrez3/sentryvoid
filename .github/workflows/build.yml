@@ -1,0 +1,52 @@
+name: Build mod
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Download official Forge MDK 1.21.1
+        run: |
+          set -e
+          V=1.21.1-52.1.0
+          curl -fL -o mdk.zip "https://maven.minecraftforge.net/net/minecraftforge/forge/$V/forge-$V-mdk.zip"
+          mkdir mdk
+          unzip -q mdk.zip -d mdk
+          ls mdk
+
+      - name: Put the mod sources into the MDK
+        run: |
+          set -e
+          cd mdk
+          rm -rf src/main/java/com/example src/main/templates src/main/resources
+          mkdir -p src/main/java src/main/resources
+          cp -r ../src/main/java/. src/main/java/
+          cp -r ../src/main/resources/. src/main/resources/
+          sed -i 's/^mod_id=.*/mod_id=sentryvoid/' gradle.properties
+          sed -i 's/^mod_version=.*/mod_version=1.0.0/' gradle.properties
+          sed -i 's/^mod_group_id=.*/mod_group_id=com.sentryvoid/' gradle.properties
+
+      - name: Build
+        run: |
+          cd mdk
+          chmod +x gradlew
+          ./gradlew build --no-daemon
+
+      - name: Upload the jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: sentryvoid-jar
+          path: mdk/build/libs/*.jar
