@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "OEO",
+    "ENE",
+    "OEO"
+  ],
+  "key": {
+    "O": { "item": "minecraft:obsidian" },
+    "E": { "item": "minecraft:echo_shard" },
+    "N": { "item": "minecraft:nether_star" }
+  },
+  "result": { "id": "sentryvoid:void_core", "count": 1 }
+}

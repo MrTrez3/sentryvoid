@@ -1,0 +1,18 @@
+{
+  "item.sentryvoid.void_core": "Void Core",
+  "ability.sentryvoid.form": "Void Form",
+  "ability.sentryvoid.blast": "Void Blast",
+  "ability.sentryvoid.grasp": "Shadow Grasp",
+  "ability.sentryvoid.dash": "Void Dash",
+  "ability.sentryvoid.singularity": "Singularity",
+  "ability.sentryvoid.engulf": "Engulf",
+  "message.sentryvoid.selected": "Ability: %s",
+  "message.sentryvoid.form_on": "The Void consumes you...",
+  "message.sentryvoid.form_off": "The Void recedes.",
+  "message.sentryvoid.too_weak": "You are too weak to use the Void.",
+  "message.sentryvoid.no_target": "No target in sight.",
+  "tooltip.sentryvoid.current": "Ability: %s",
+  "tooltip.sentryvoid.hint": "Right click: use | Shift + right click: switch",
+  "ability.sentryvoid.erase": "Erase",
+  "message.sentryvoid.immune": "The Void cannot touch this target."
+}

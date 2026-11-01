@@ -1,0 +1,18 @@
+{
+  "item.sentryvoid.void_core": "Núcleo do Void",
+  "ability.sentryvoid.form": "Forma do Void",
+  "ability.sentryvoid.blast": "Rajada do Void",
+  "ability.sentryvoid.grasp": "Garra de Sombra",
+  "ability.sentryvoid.dash": "Impulso do Void",
+  "ability.sentryvoid.singularity": "Singularidade",
+  "ability.sentryvoid.engulf": "Engolir",
+  "message.sentryvoid.selected": "Habilidade: %s",
+  "message.sentryvoid.form_on": "O Void toma conta de você...",
+  "message.sentryvoid.form_off": "O Void recua.",
+  "message.sentryvoid.too_weak": "Você está fraco demais para usar o Void.",
+  "message.sentryvoid.no_target": "Nenhum alvo à vista.",
+  "tooltip.sentryvoid.current": "Habilidade: %s",
+  "tooltip.sentryvoid.hint": "Botão direito: usar | Shift + botão direito: trocar",
+  "ability.sentryvoid.erase": "Apagar",
+  "message.sentryvoid.immune": "O Void não consegue tocar este alvo."
+}

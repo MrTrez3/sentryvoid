@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[52,)"
+license="MIT"
+
+[[mods]]
+modId="sentryvoid"
+version="1.0.0"
+displayName="Sentry: Void"
+description='''
+Habilidades do Void, inspiradas no Sentry de Thunderbolts*.
+Mod nao oficial, feito por fas.
+'''
+
+[[dependencies.sentryvoid]]
+modId="forge"
+mandatory=true
+versionRange="[52,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.sentryvoid]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.21.1,1.22)"
+ordering="NONE"
+side="BOTH"
